@@ -1,5 +1,5 @@
 // TODO: Include packages needed for this application
-const fs = require ('fs');
+const fs = require('fs');
 const inquirer = require('inquirer');
 const generateMarkdown = require('./utils/generateMarkdown');
 
@@ -32,60 +32,103 @@ const questions = [
         }
     },
     {
-        type: 'confirm',
-        name: 'confirmAbout',
-        message: 'Would you like to enter some information about yourself for an "About" section?',
-        default: true
-  },
-  {
-    type: 'input',
-    name: 'about',
-    message: 'Provide some information about yourself:',
-    when: ({ confirmAbout }) => confirmAbout
-  },
-  {
-      type:'input',
-      name:'What is the name of your poject?',
-      message:'Project Title',
-  },
-  {
-    type:'input',
-    name:'',
-    message:'',
-    default: ''
-  },
-  {
-    type:'input',
-    name:'',
-    message:'',
-    default: ''
-  },
-  {
-    type:'input',
-    name:'',
-    message:'',
-    default: ''
-  },
-  {
-    type: 'checkbox',
-    name: 'languages',
-    message: 'What did you this project with? (Check all that apply)',
-    choices: ['JavaScript', 'HTML', 'CSS', 'ES6', 'jQuery', 'Bootstrap', 'Node']
-  },
+        type: 'input',
+        name: 'name',
+        message: 'What is the name of your project? (Required)',
+        validate: nameInput => {
+            if (nameInput) {
+                return true;
+            } else {
+                console.log('You need to enter a project name!');
+                return false;
+            }
+        }
+    },
+    {
+        type: 'input',
+        name: 'description',
+        message: 'Provide a description of the project (Required)',
+        validate: descriptionInput => {
+            if (descriptionInput) {
+                return true;
+            } else {
+                console.log('You need to enter a project description!');
+                return false;
+            }
+        }
+    },
+    {
+        type: 'input',
+        name: 'Installation',
+        message: 'Provide instruction on how to install the project:',
+        validate: installationInput => {
+            if (installationInput) {
+                return true;
+            } else {
+                console.log('Please provide instalation instructions!');
+                return false;
+            }
+        }
+    },
+    {
+        type: 'checkbox',
+        name: 'languages',
+        message: 'What language was used to create this project: (Check all that apply)',
+        choices: ['JavaScript', 'HTML', 'CSS', 'ES6', 'jQuery', 'Bootstrap', 'Node']
+    },
+    {
+        type: 'input',
+        name: 'Usage',
+        message: 'Provide exmaples showcasing usage.',
+    },
+    {
+        type: 'checkbox',
+        name: 'License',
+        message: '(Check all that apply)',
+        choices: ['', '', '', '', '', '', '']
+    },
+    {
+        type: 'input',
+        name: 'Credits',
+        message: '',
+    },
+    {
+        type: 'input',
+        name: 'Contributors',
+        message: '',
+    },
+    {
+        type: 'input',
+        name: '',
+        message: '',
+    },
 ];
-// TODO: Create a function to write README file
+
+// Function to write README file
+function writeToFile(fileName, data) {
+    fs.writeFile("./dist/generated-README.md", data, err => {
+        if (err) {
+            return console.log(err)
+        } else {
+            console.log("Your README has been generated!");
+        }
+    });
+};
+
+//Function to initialize
 function init() {
 
-// TODO: Create a function to initialize app
+    //Prompt to call inquirer
     inquirer.prompt(questions)
-    .then((generateMarkdown, data) => {
-        console.log("Making ReadME");
-        fs.writeFileSync( generateMarkdown, data);
-    })
-    .catch((err) => {
-        console.log(err);
-    })
+        .then(function(data) {
+            writeToFile("README.md", generateMarkdown(data));
+            console.log(data);
+        })
+        .catch((err) => {
+            console.log(err);
+        })
 }
 
 // Function call to initialize app
 init();
+
