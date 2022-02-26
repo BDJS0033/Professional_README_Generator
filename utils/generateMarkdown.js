@@ -51,6 +51,7 @@ function generateMarkdown(data) {
   * [Installation](#installation)
   * [Usage](#usage)
   * ${renderLicenseTOC(data.license)}
+  * [Badges](#badges)
   * [Credits](#credits)
   * [Contributing](#contributing)
   * [Tests](#tests)
@@ -64,6 +65,9 @@ function generateMarkdown(data) {
 
   ## License
   ${renderLicenseSection(data.license)}
+
+  ## Badges
+  ${data.badges}
 
   ## Credits
    ${data.credits}
