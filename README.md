@@ -2,7 +2,6 @@
 
 ## Description
 ________
-
 Generating a high-quality README for open source projects. You can quickly and easily generate one by using a command-line application. This is beneficial so you can dedicate your time to more important parts of your project.
 
 You can base your README off the below Table of Contents:
@@ -38,7 +37,8 @@ The application will initialize and ask the user a series of questions, and gene
 ## Example of Generated README.md File
 ___
 
-![alt text] (images/ReadME%20File%20SC.jpg "README.md File")
+![README File SC](https://user-images.githubusercontent.com/82056351/155911623-ca2b01bf-163e-4c20-9e18-cbdd3a175456.jpg)
+
 
 ## Contact Me
 ___
