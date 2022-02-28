@@ -2,7 +2,7 @@
 
   ![badge](https://img.shields.io/badge/license-undefined-blue)
   ## Description
-  s
+  d
   
   ## Table-of-Contents
   * [Description](#description)
@@ -43,5 +43,5 @@
   ## Questions
   Feel free to reach out to me for questions or contributions: 
   
-  [GitHub](https://github.com/n)
-  [Email: s](mailto:s)
+  [GitHub](https://github.com/clear)
+  [Email: l](mailto:l)
