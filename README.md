@@ -38,7 +38,7 @@ The application will initialize and ask the user a series of questions, and gene
 ## Example of Generated README.md File
 ___
 
-![alt text]( "README.md File")
+![alt text] (images/ReadME%20File%20SC.jpg "README.md File")
 
 ## Contact Me
 ___
