@@ -1,14 +1,15 @@
 # undefined
 
-  ![badge](https://img.shields.io/badge/License-No%20License-blue)
+  ![badge](https://img.shields.io/badge/license-undefined-blue)
   ## Description
-  test
+  s
   
   ## Table-of-Contents
   * [Description](#description)
   * [Installation](#installation)
   * [Usage](#usage)
   * [License](#license)
+  * [Badges](#badges)
   * [Credits](#credits)
   * [Contributing](#contributing)
   * [Tests](#tests)
@@ -22,8 +23,11 @@
 
   ## License
   This application is covered under the following license: 
-    [undefined](https://choosealicense.com/)
+    [undefined](https://choosealicense.com/licenses/undefined)
     
+
+  ## Badges
+  undefined
 
   ## Credits
    undefined
@@ -38,6 +42,6 @@
 
   ## Questions
   Feel free to reach out to me for questions or contributions: 
-  [GitHub](https://github.com/test)
   
-  [Email: test](mailto:test)
+  [GitHub](https://github.com/n)
+  [Email: s](mailto:s)

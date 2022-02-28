@@ -79,28 +79,33 @@ const questions = [
     {
         type: 'input',
         name: 'Usage',
-        message: 'Provide exmaples showcasing usage.',
+        message: 'Provide exmaples showcasing how this program can be used:',
     },
     {
         type: 'checkbox',
         name: 'License',
-        message: '(Check all that apply)',
-        choices: ['', '', '', '', '', '', '']
+        message: 'Specify the license(s) on your project (More than one can apply)',
+        choices: ['Apache', 'GNU GPLv3', 'MIT', 'ISC', 'GNU GPLv2 (or later)', 'No License Required',]
     },
     {
         type: 'input',
-        name: 'Credits',
-        message: '',
+        name: 'Credit',
+        message: 'If applicable, mention the people who helped you with this project.',
     },
     {
         type: 'input',
-        name: 'Contributors',
-        message: '',
+        name: 'Contribute',
+        message: 'Let people know how they can contribute to your project!',
     },
     {
         type: 'input',
-        name: '',
-        message: '',
+        name: 'Test',
+        message: 'Provide any tests written for your project and showcase how they are used.',
+    },
+    {
+        type: 'input',
+        name: 'Badges',
+        message: 'Add all applicable badges to your README',
     },
 ];
 

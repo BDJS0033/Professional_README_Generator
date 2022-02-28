@@ -1,8 +1,8 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
-  if (license !== 'No License') {
-    return `![badge](https://img.shields.io/badge/License-No%20License-blue)`;
+  if (license !== 'No License Required') {
+    return `![badge](https://img.shields.io/badge/license-${license}-blue)`;
   } else {
     return '';
   }
@@ -11,8 +11,8 @@ function renderLicenseBadge(license) {
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
-  if (license !== 'No License') {
-    return `[${license}](https://choosealicense.com/licenses/mit/)`;
+  if (license !== 'No License Required') {
+    return `[${license}](https://choosealicense.com/licenses/${license})`;
   } else {
     return '';
   }
@@ -21,7 +21,7 @@ function renderLicenseLink(license) {
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
-  if (license !== 'No License') {
+  if (license !== 'No License Required') {
     return `This application is covered under the following license: 
     ${renderLicenseLink(license)}
     `;
@@ -30,8 +30,8 @@ function renderLicenseSection(license) {
   }
 };
 
-function renderLicenseTOC(license) {
-  if (license !== 'No License') {
+function renderLicenseInfo(license) {
+  if (license !== 'No License Required') {
     return `[License](#license)`;
   } else {
     return '';
@@ -50,7 +50,7 @@ function generateMarkdown(data) {
   * [Description](#description)
   * [Installation](#installation)
   * [Usage](#usage)
-  * ${renderLicenseTOC(data.license)}
+  * ${renderLicenseInfo(data.license)}
   * [Badges](#badges)
   * [Credits](#credits)
   * [Contributing](#contributing)
@@ -82,8 +82,8 @@ function generateMarkdown(data) {
 
   ## Questions
   Feel free to reach out to me for questions or contributions: 
-  [GitHub](https://github.com/${data.username})
   
+  [GitHub](https://github.com/${data.username})
   [Email: ${data.email}](mailto:${data.email})
 `;
 }
