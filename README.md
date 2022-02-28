@@ -34,6 +34,11 @@ Node index.js
 
 The application will initialize and ask the user a series of questions, and generate a README File based on said user response.
 
+## Walkthrough Video
+__________
+
+https://drive.google.com/file/d/1yd6JKKgmGACpXH4vWe83gnSWXoerO1wN/view
+
 ## Example of Generated README.md File
 ___
 
